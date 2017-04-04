@@ -1,0 +1,25 @@
+{
+  "name": "mongo-blog-api",
+  "version": "1.0.0",
+  "description": "Blog API using Mongo/Mongoose",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmpal78/blog-api-mongo.git"
+  },
+  "author": "Matt Palumbo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmpal78/mongo-blog-api.git"
+  },
+  "homepage": "https://github.com/mmpal78/mongo-blog-api#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.3",
+    "morgan": "^1.8.1"
+  }
+}
