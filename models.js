@@ -13,7 +13,7 @@ const blogSchema = mongoose.Schema({
 blogSchema.virtual('authorName').get(function(){
 	return `${this.author.firstName} ${this.author.lastName}`
 });
-
+/*
 blogSchema.methods.apiRep = function(){
 	return {				
 		title: this.title,
@@ -22,7 +22,7 @@ blogSchema.methods.apiRep = function(){
 		created: this.created
 	};
 }
-
+*/
 const Blog = mongoose.model('Blog', blogSchema);
 
 module.exports = {Blog};
