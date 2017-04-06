@@ -41,7 +41,7 @@ app.post('/posts', (req, res)=>{
 	for(let i = 0; i < requiredFields.length; i++){
 		const field = requiredFields[i];
 		if(!(field in req.body)){
-			console.error(`Missing ${field}`);
+			//console.error(`Missing ${field}`);
 			return res.status(400).send(`Missing ${field}`);
 		}			
 	}
@@ -64,9 +64,7 @@ app.delete('/posts/:id', (req, res) => {
 	Blog
 	.findByIdAndRemove(req.params.id)
 	.exec()
-	.then(()=>{
-		res.status(204).json({message: 'Successfully Deleted'});		
-	})
+	.then(() => res.status(204).json({message: 'Successfully Deleted'}))
 	.catch(err => {
 		console.error(err);
 		res.status(500).json({error: 'Something Went Wrong, Unable to Delete Post'});
